@@ -203,3 +203,14 @@ resource "checkly_check" "tf-maintainence-window-api" {
     activated = true
   }
 }
+
+resource "checkly_dashboard" "tf-dog-dashboard" {
+  custom_url = "tf-lauras-dog-dashboard" # Should be updated to a unique value. Otherwise, there will be a 409 conflict error.
+  description = "Status of Dog.ceo API"
+  logo = "https://upload.wikimedia.org/wikipedia/commons/8/89/Dog.svg"
+  header = "Dog API"
+  width = "FULL"
+  tags = [
+    "dog"
+  ]
+}
